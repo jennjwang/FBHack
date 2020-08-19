@@ -10,7 +10,7 @@ import SwiftUI
 
 struct chatbot: View {
     var body: some View {
-        Text("chatbot page")
+        Text("chatbot here")
     }
 }
 
