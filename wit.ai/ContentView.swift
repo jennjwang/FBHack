@@ -10,7 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        login()
+        //seeing if they appear
+        VStack{
+            login()
+            chatbot()
+        }
     }
 }
 

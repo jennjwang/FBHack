@@ -14,6 +14,7 @@
 		5079057624ECC83B000A4B5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5079057524ECC83B000A4B5A /* Preview Assets.xcassets */; };
 		5079057924ECC83B000A4B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5079057724ECC83B000A4B5A /* LaunchScreen.storyboard */; };
 		5079058124ECC97B000A4B5A /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079058024ECC97B000A4B5A /* login.swift */; };
+		5079058324ECCA23000A4B5A /* chatbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079058224ECCA23000A4B5A /* chatbot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5079057824ECC83B000A4B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5079057A24ECC83C000A4B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5079058024ECC97B000A4B5A /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		5079058224ECCA23000A4B5A /* chatbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatbot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5079056E24ECC838000A4B5A /* SceneDelegate.swift */,
 				5079057024ECC838000A4B5A /* ContentView.swift */,
 				5079058024ECC97B000A4B5A /* login.swift */,
+				5079058224ECCA23000A4B5A /* chatbot.swift */,
 				5079057224ECC83B000A4B5A /* Assets.xcassets */,
 				5079057724ECC83B000A4B5A /* LaunchScreen.storyboard */,
 				5079057A24ECC83C000A4B5A /* Info.plist */,
@@ -151,6 +154,7 @@
 			files = (
 				5079056D24ECC838000A4B5A /* AppDelegate.swift in Sources */,
 				5079056F24ECC838000A4B5A /* SceneDelegate.swift in Sources */,
+				5079058324ECCA23000A4B5A /* chatbot.swift in Sources */,
 				5079057124ECC838000A4B5A /* ContentView.swift in Sources */,
 				5079058124ECC97B000A4B5A /* login.swift in Sources */,
 			);
