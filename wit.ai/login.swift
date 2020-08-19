@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  login.swift
 //  wit.ai
 //
 //  Created by Rachael Wei on 8/18/20.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct login: View {
     var body: some View {
-        login()
+        Text("login page")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct login_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        login()
     }
 }
