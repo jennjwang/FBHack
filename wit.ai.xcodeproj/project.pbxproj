@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45FA10AD77A8D5773C93357A /* Pods_wit_ai.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81224AE6BC04FF3E8B864D3 /* Pods_wit_ai.framework */; };
+		502215FF24F1F8060012DF4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 502215FE24F1F8060012DF4D /* GoogleService-Info.plist */; };
 		5079056D24ECC838000A4B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079056C24ECC838000A4B5A /* AppDelegate.swift */; };
 		5079056F24ECC838000A4B5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079056E24ECC838000A4B5A /* SceneDelegate.swift */; };
 		5079057124ECC838000A4B5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5079057024ECC838000A4B5A /* ContentView.swift */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		502215FE24F1F8060012DF4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5079056924ECC838000A4B5A /* wit.ai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wit.ai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079056C24ECC838000A4B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5079056E24ECC838000A4B5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		5079057A24ECC83C000A4B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5079058024ECC97B000A4B5A /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		5079058224ECCA23000A4B5A /* chatbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatbot.swift; sourceTree = "<group>"; };
+		682DDBD785659131B692E61E /* Pods-wit.ai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wit.ai.debug.xcconfig"; path = "Target Support Files/Pods-wit.ai/Pods-wit.ai.debug.xcconfig"; sourceTree = "<group>"; };
+		76FF02297A0C7DA0E57D83BF /* Pods-wit.ai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wit.ai.release.xcconfig"; path = "Target Support Files/Pods-wit.ai/Pods-wit.ai.release.xcconfig"; sourceTree = "<group>"; };
+		C81224AE6BC04FF3E8B864D3 /* Pods_wit_ai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wit_ai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,28 @@
 				5079058A24ECCB8E000A4B5A /* FacebookGamingServices in Frameworks */,
 				5079058624ECCB8E000A4B5A /* FacebookShare in Frameworks */,
 				5079058824ECCB8E000A4B5A /* FacebookCore in Frameworks */,
+				45FA10AD77A8D5773C93357A /* Pods_wit_ai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D7AC1410D55484F3BD87A2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C81224AE6BC04FF3E8B864D3 /* Pods_wit_ai.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5079056024ECC837000A4B5A = {
 			isa = PBXGroup;
 			children = (
 				5079056B24ECC838000A4B5A /* wit.ai */,
 				5079056A24ECC838000A4B5A /* Products */,
+				9C12D3A1E1452B2F2696AA3F /* Pods */,
+				2D7AC1410D55484F3BD87A2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +85,7 @@
 		5079056B24ECC838000A4B5A /* wit.ai */ = {
 			isa = PBXGroup;
 			children = (
+				502215FE24F1F8060012DF4D /* GoogleService-Info.plist */,
 				5079056C24ECC838000A4B5A /* AppDelegate.swift */,
 				5079056E24ECC838000A4B5A /* SceneDelegate.swift */,
 				5079057024ECC838000A4B5A /* ContentView.swift */,
@@ -89,6 +107,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9C12D3A1E1452B2F2696AA3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				682DDBD785659131B692E61E /* Pods-wit.ai.debug.xcconfig */,
+				76FF02297A0C7DA0E57D83BF /* Pods-wit.ai.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5079057D24ECC83C000A4B5A /* Build configuration list for PBXNativeTarget "wit.ai" */;
 			buildPhases = (
+				A5392A1964EB7B11ED952E05 /* [CP] Check Pods Manifest.lock */,
 				5079056524ECC838000A4B5A /* Sources */,
 				5079056624ECC838000A4B5A /* Frameworks */,
 				5079056724ECC838000A4B5A /* Resources */,
+				D66D484220FD7300882CE0B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,12 +186,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				5079057924ECC83B000A4B5A /* LaunchScreen.storyboard in Resources */,
+				502215FF24F1F8060012DF4D /* GoogleService-Info.plist in Resources */,
 				5079057624ECC83B000A4B5A /* Preview Assets.xcassets in Resources */,
 				5079057324ECC83B000A4B5A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5392A1964EB7B11ED952E05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wit.ai-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66D484220FD7300882CE0B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wit.ai/Pods-wit.ai-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wit.ai/Pods-wit.ai-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wit.ai/Pods-wit.ai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5079056524ECC838000A4B5A /* Sources */ = {
@@ -307,6 +379,7 @@
 		};
 		5079057E24ECC83C000A4B5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 682DDBD785659131B692E61E /* Pods-wit.ai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +400,7 @@
 		};
 		5079057F24ECC83C000A4B5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76FF02297A0C7DA0E57D83BF /* Pods-wit.ai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct login: View {
+struct loginView: View {
     var body: some View {
         Text("login page")
     }
 }
 
-struct login_Previews: PreviewProvider {
+struct loginView_Previews: PreviewProvider {
     static var previews: some View {
-        login()
+        loginView()
     }
 }

@@ -1,0 +1,6 @@
+framework module Pods_wit_ai {
+  umbrella header "Pods-wit.ai-umbrella.h"
+
+  export *
+  module * { export * }
+}
