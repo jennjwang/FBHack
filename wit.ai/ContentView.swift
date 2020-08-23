@@ -11,18 +11,20 @@ import FBSDKLoginKit
 import Firebase
 
 
-//goes right to chatbot, need to initialize.
+//need to ask users
+//bugs on device but not simulator
+//remember info
 struct ContentView: View {
-    @State var showScreen = login.loggedIn
+    @State var loggedIn = false
     var body: some View {
         VStack{
-            if showScreen == false{
+            if loggedIn == false{
                 VStack{
                     Text("App name here").bold()
-                    login().frame(width: 100, height: 50)
+                    login(loggedIn: $loggedIn).frame(width: 100, height: 50)
                 }
             } else {
-                chatbot()
+                chatbot(messages: [ChatMessage]())
             }
         }
     }
@@ -35,10 +37,10 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct login : UIViewRepresentable {
-    @State static var loggedIn = false
+    @Binding var loggedIn : Bool
     func makeCoordinator() -> Coordinator {
         
-        return login.Coordinator()
+        return login.Coordinator(inst: self)
     }
     
     func makeUIView(context: UIViewRepresentableContext<login>) -> FBLoginButton {
@@ -53,6 +55,10 @@ struct login : UIViewRepresentable {
     }
     
     class Coordinator : NSObject, LoginButtonDelegate{
+        var loginInstance : login
+        init(inst : login){
+            loginInstance = inst
+        }
         func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
             if error != nil{
                 print((error?.localizedDescription)!)
@@ -67,13 +73,14 @@ struct login : UIViewRepresentable {
                         print((er?.localizedDescription))
                         return
                     }
-                    loggedIn = true
+                    self.loginInstance.loggedIn = true
                 }
             }
         }
         
         func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
             try! Auth.auth().signOut()
+            self.loginInstance.loggedIn = false
         }
         
         
