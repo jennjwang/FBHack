@@ -10,12 +10,20 @@ import SwiftUI
 import FBSDKLoginKit
 import Firebase
 
+
+//goes right to chatbot, need to initialize.
 struct ContentView: View {
+    @State var showScreen = login.loggedIn
     var body: some View {
-        //seeing if they appear
         VStack{
-            Text("App name here").bold()
-            login().frame(width: 100, height: 50)
+            if showScreen == false{
+                VStack{
+                    Text("App name here").bold()
+                    login().frame(width: 100, height: 50)
+                }
+            } else {
+                chatbot()
+            }
         }
     }
 }
@@ -27,6 +35,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct login : UIViewRepresentable {
+    @State static var loggedIn = false
     func makeCoordinator() -> Coordinator {
         
         return login.Coordinator()
@@ -58,6 +67,7 @@ struct login : UIViewRepresentable {
                         print((er?.localizedDescription))
                         return
                     }
+                    loggedIn = true
                 }
             }
         }
