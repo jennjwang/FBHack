@@ -15,16 +15,19 @@ import Firebase
 //bugs on device but not simulator
 //remember info
 struct ContentView: View {
+    var testing = [
+            ChatMessage(message: "Initial Message", avatar: "A", isMe: false),
+    ]
     @State var loggedIn = false
     var body: some View {
-        VStack{
+        return VStack{
             if loggedIn == false{
                 VStack{
                     Text("App name here").bold()
                     login(loggedIn: $loggedIn).frame(width: 100, height: 50)
                 }
             } else {
-                chatbot(messages: [ChatMessage]())
+                chatbot(messages: testing)
             }
         }
     }

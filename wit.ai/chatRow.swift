@@ -13,18 +13,18 @@ import SwiftUI
 struct chatRow: View {
     var chatMessage: ChatMessage
     var body: some View {
-        HStack {
+        return HStack {
             Group {
                 if !chatMessage.isMe {
                     HStack {
                         Group {
-                            Text(chatMessage.avatar)
                             Text(chatMessage.message)
                                 .bold()
-                                .padding(10)
                                 .foregroundColor(Color.white)
-                                //.background(chatMessage.color)
+                                .padding(10)
+                                .background(Color(UIColor.lightGray))
                                 .cornerRadius(10)
+                            Spacer()
                         }
                     }
                 } else {
@@ -35,14 +35,13 @@ struct chatRow: View {
                                 .bold()
                                 .foregroundColor(Color.white)
                                 .padding(10)
-                                //.background(chatMessage.color)
+                                .background(Color.blue)
                                 .cornerRadius(10)
-                            Text(chatMessage.avatar)
                         }
                     }
                 }
             }
-        }
+        }.padding()
     }
 }
 

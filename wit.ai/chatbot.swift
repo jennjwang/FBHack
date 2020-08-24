@@ -8,12 +8,10 @@
 
 import SwiftUI
 
+//make space between messages smaller
+//make messages and loggIn environment objects
 struct chatbot: View {
 //    @Binding var loggedIn : Bool
-        var testing = [
-            ChatMessage(message: "Hello world", avatar: "A", isMe: false),
-            ChatMessage(message: "Hi", avatar: "B", isMe: true)
-    ]
     @State var composedMessage: String = ""
     @State var messages : [ChatMessage]
     
@@ -23,9 +21,9 @@ struct chatbot: View {
             NavigationLink(destination: ContentView()) {
                 Text("Sign out!")
             }
-            List {
+            ScrollView {
                 ForEach(messages, id: \.self) { msg in
-                    chatRow(chatMessage: msg)
+                    chatRow(chatMessage: msg).frame(height: 50)
                 }
             }
             HStack {
@@ -33,15 +31,11 @@ struct chatbot: View {
                 Button(action: sendMessage){
                     Text("Send")
                 }
-            }.frame(minHeight: CGFloat(50)).padding()
-        }
+            }.padding()
+        }.frame(maxHeight: UIScreen.main.bounds.size.height)
     }
     func sendMessage(){
         //fix this later, used for testing purposes
-        if messages.count == 0{
-            messages.append(testing[0])
-            messages.append(testing[1])
-        }
         messages.append(ChatMessage(message: composedMessage, avatar: "A", isMe: true))
         composedMessage = ""
     }
