@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-//make space between messages smaller
+//offset view when there is a new message
 //make messages and loggIn environment objects
 struct chatbot: View {
 //    @Binding var loggedIn : Bool
@@ -35,12 +35,18 @@ struct chatbot: View {
         }.frame(maxHeight: UIScreen.main.bounds.size.height)
     }
     func sendMessage(){
-        //fix this later, used for testing purposes
-        messages.append(ChatMessage(message: composedMessage, avatar: "A", isMe: true))
+        messages.append(ChatMessage(message: composedMessage, avatar: "B", isMe: true))
+        //do after a delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            self.receiveMessage(msg: self.composedMessage)
+        })
         composedMessage = ""
     }
-    func recieveMessage(){
+    func receiveMessage(msg : String){
         //witai stuff
+        var response = "Response"
+        //add response
+        messages.append(ChatMessage(message: response, avatar: "A", isMe: false))
     }
 }
 
